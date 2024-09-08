@@ -1,0 +1,32 @@
+.castList{
+   display: grid;
+   gap: 20px;
+   grid-template-columns: repeat(4, 1fr);
+}
+.castImg{
+width: 150px;
+height: 200px;
+margin-bottom: 10px;
+border-radius: 2px;
+}
+.castLi{
+display: flex;
+flex-direction: column;
+width: 200px;
+height: 350px;
+padding: 20px;
+align-items: center;
+background-color: #1D2939;
+border-radius: 8px;
+transition: 250ms;
+}
+.castLi:hover{
+transition: 250ms;
+background-color: #FD853A;
+
+}
+.castP{
+   text-align: center;
+   margin: 0;
+   color: white;
+}

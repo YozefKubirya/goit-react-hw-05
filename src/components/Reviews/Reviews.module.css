@@ -1,0 +1,19 @@
+.reviewsContainer{
+   border-radius: 50px;
+   padding: 15px;
+   background-color:  #1D2939;
+   margin-top: 40px;
+}
+.reviewsText{
+   color:white
+}
+.reviewsTitle{
+   color:white
+
+}
+.reviewsSpan{
+   text-align: center;
+   font-weight: bold;
+   font-size: large;
+   color: white;
+}

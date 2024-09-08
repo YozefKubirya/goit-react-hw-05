@@ -1,20 +1,39 @@
+import css from '../MovieInfo/MovieInfo.module.css'
+
 export const MOVIE_POSTER_LINK='https://image.tmdb.org/t/p/w500/';
-export const defaultImg = '<https://dl-media.viber.com/10/share/2/long/vibes/icon/image/0x0/95e0/5688fdffb84ff8bed4240bcf3ec5ac81ce591d9fa9558a3a968c630eaba195e0.jpg>'
+export const defaultImg = "http://dummyimage.com/150x200/c4c4c8/646cff.gif&text=The+image!";
 export default function  MovieInfo({ title,score,overview,genres,backdrop_path})
 {
    const userScore=Math.round(score)*10;
    return<>
+  <div className={css.movieCardContainer}>
+      <img src={backdrop_path? MOVIE_POSTER_LINK+backdrop_path :defaultImg } alt="movie-poster" className={css.imageMovie}/>
+
    <div>
-      <img src={backdrop_path? MOVIE_POSTER_LINK+backdrop_path :defaultImg } alt="movie-poster" />
-   <ul>
-   <li><h2>{title}</h2></li>
-   <li><p> User score : {userScore}%</p></li>
-   <li><b>Overview</b> : <p>{overview}</p></li>
-   <li><b>Genres</b> : {genres.map((genre)=>(
-      <p key={genre.id}>{genre.name}</p>)
-   )}</li>
-</ul>
-</div>
+
+   <h2 className={css.title}>{title}</h2>
+   <p className={css.text}>
+      <span className={css.span}> User score</span>  : {userScore}%</p>
+    <p className={css.text}> 
+      <span className={css.span}> Overview</span> : {overview}</p>
+
+    <p className={css.text}>
+    <span className={css.span}>Genres : </span>
+    {genres.length > 0 ? (
+            genres.map(({ name }) => name).join(", ")
+          ) : (
+            <>Sorry, not found</>
+          )}
+    </p>
+    {/* {genres.map((genre)=>(
+      <p key={genre.id} className={css.text}>{genre.name}</p>))} */}
+   </div>
+
+   
+   </div>
+  
+
+
    
    </>
 }

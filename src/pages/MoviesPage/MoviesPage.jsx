@@ -4,7 +4,8 @@ import { getSearchMovie } from "../../API";
 import MovieList from "../../components/MovieList/MovieList";
 import SearchForm from "../../components/SearchForm/SearchForm";
 import Error from "../../components/Error/Error";
-export default function Movies (){
+import css from '../MoviesPage/MoviesPage.module.css'
+export default function MoviesPage (){
    const [movies,setMovies]=useState([]);
    const [params]=useSearchParams()
    const [error,setError]=useState(false)
@@ -25,7 +26,8 @@ useEffect(()=>{
 
   
    return<>
-   Search Movie
+   <h2 className={css.moviesPageTitle}>Search Movie</h2>
+   
    <SearchForm/>
    {movies.length > 0 && <MovieList movies={movies}/>}
   {error&& <Error/>}

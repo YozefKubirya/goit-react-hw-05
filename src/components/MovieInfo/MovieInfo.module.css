@@ -1,0 +1,25 @@
+.imageMovie{
+   width: 250px;
+  
+}
+.movieCardContainer{
+   display: flex;
+   gap: 20px;
+}
+
+.title{
+   color: rgb(17, 17, 17);
+   display: block;
+}
+
+.text{
+   margin-bottom: 10px;
+   margin-top: 0;
+   margin-left: 0;
+   margin-right: 0;
+   color:rgb(17, 17, 17);;
+}
+.span{
+   font-weight: bold;
+   color:rgb(17, 17, 17);;
+}

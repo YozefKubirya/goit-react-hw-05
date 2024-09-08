@@ -1,0 +1,38 @@
+.goBackLink{
+   display: inline-block;
+   border-radius: 60px;
+   color: white;
+   text-align: center;
+   padding: 15px 20px;
+   transition: 250ms;
+  margin: 20px 0;
+   text-decoration: none;
+   background-color: #1D2939;
+}
+.goBackLink:hover{
+   background-color: #FD853A;
+   color: white;
+   transition: 250ms;
+}
+.ulListInfo{
+   display: flex;
+   gap: 100px;
+   margin-top: 15px;
+   align-items: center;
+   justify-content: center;
+}
+.reditLink{
+   color: #27384e;
+   border-radius: 40px;
+   text-align: center;
+   padding: 15px 20px;
+   transition: 250ms;
+   text-decoration: none;
+   background-color: #F2F4F7;
+   border: 1px solid #99a4b6;
+}
+.reditLink:hover{
+   background-color: #FD853A;
+   color: white;
+   transition: 250ms;
+}

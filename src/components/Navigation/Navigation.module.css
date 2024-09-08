@@ -1,0 +1,30 @@
+
+.nav{
+   
+   display: flex;
+  gap: 30px;
+   border-radius: 50px;
+   text-align: center;
+   padding: 10px;
+   margin-bottom: 20px;
+height: 78px;
+background-color: #1D2939;
+
+}
+.link{
+   border-radius: 60px;
+   color: white;
+   text-align: center;
+   padding: 15px 20px;
+   transition: 250ms;
+   margin-right: 30px;
+   text-decoration: none;
+}
+.link:last-child{
+   margin-right: 0px;
+}
+.link:hover{
+   background-color: #FD853A;
+   color: white;
+   transition: 250ms;
+}

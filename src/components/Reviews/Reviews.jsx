@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import { getReviews } from "../../API";
 import Error from "../Error/Error";
-
+import css from '../Reviews/Reviews.module.css'
 export default function Reviews(){
    const [reviews,setReviews]=useState([])
    const {movieId}=useParams();
@@ -21,17 +21,24 @@ export default function Reviews(){
       getDataReviews()
    },[movieId])
    return <>
+<div className={css.reviewsContainer}> 
 <ul>
-  
+ <h2 className={css.reviewsTitle}>Movie Reviews:</h2> 
 {reviews.length > 0  ? reviews.map((review)=>(
       <li key={review.id}>
-         <p>Author : {review.author}</p>
-         <p>{review.content}</p>
+         <p className={css.reviewsText}> 
+            <span className={css.reviewsSpan}>Author:</span> 
+            {review.author}
+         </p>
+         <p className={css.reviewsText}>{review.content}
+         </p>
       </li>
     
-   )) : <>There is no reviews</>}
+   )) : <span className={css.reviewsSpan}>There is no reviews,sorry..</span>}
 
     {error && <Error/>  }
 </ul>
+</div>
+
    </>
 }

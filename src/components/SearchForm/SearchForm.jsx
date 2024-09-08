@@ -1,4 +1,5 @@
 import { useSearchParams } from "react-router-dom";
+import css from '../SearchForm/SearchForm.module.css'
 export default function SearchForm (){
    const [params,setParams]=useSearchParams();
    const handleSubmit=(e)=>{
@@ -9,9 +10,12 @@ setParams(params);
       form.reset()
    }
    return<>
-   <form onSubmit={handleSubmit}>
-      <input type="text" name='movie' />
-      <button type="submit">Search</button>
+   <div className={css.formContainer}>
+   <form onSubmit={handleSubmit} className={css.form}>
+      <input className={css.formInput}type="text" name='movie' />
+      <button type="submit" className={css.formButton}>Search</button>
    </form>
+   </div>
+  
    </>
 }

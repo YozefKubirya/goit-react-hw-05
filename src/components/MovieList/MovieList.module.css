@@ -1,0 +1,21 @@
+.movieListContainer{
+border-radius: 50px;
+padding: 15px;
+background-color:  #1D2939;
+
+}
+.movieList{
+   margin: 10px;
+}
+.movieListLink{
+   color: white;
+   text-decoration: none;
+   padding: 5px;
+   border-radius: 8px;
+   transition: 250ms;
+}
+.movieListLink:hover{
+   color: #1D2939;
+   background-color:  #FD853A;
+   transition: 250ms; 
+}
